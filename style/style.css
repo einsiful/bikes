@@ -1,41 +1,59 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "icomoon";
-  src: url("fonts/icomoon.eot?qslcpk");
-  src: url("fonts/icomoon.eot?qslcpk#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?qslcpk") format("truetype"), url("fonts/icomoon.woff?qslcpk") format("woff"), url("fonts/icomoon.svg?qslcpk#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?uwy916');
+  src:  url('fonts/icomoon.eot?uwy916#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uwy916') format('truetype'),
+    url('fonts/icomoon.woff?uwy916') format('woff'),
+    url('fonts/icomoon.svg?uwy916#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-[class^=icon-], [class*=" icon-"] {
+
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak-as: none;
+  font-family: 'icomoon' !important;
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-home:before {
-  content: "";
+  content: "\e900";
+}
+.icon-pencil2:before {
+  content: "\e906";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-mug:before {
+  content: "\e9a2";
+}
+.icon-lab:before {
+  content: "\e9aa";
+}
+.icon-google-plus3:before {
+  content: "\ea8d";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-github:before {
+  content: "\eab0";
 }
 
-.icon-wrench:before {
-  content: "";
-}
-
-.icon-clipboard:before {
-  content: "";
-}
-
-img {
-  width: 100%;
-}
 
 @media only screen and (max-width: 1000px) {
   .cardee {
@@ -76,11 +94,11 @@ li a {
 
 .topmenu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  position: fixed;
+  grid-template-columns: repeat(5, 1fr);
   list-style-type: none;
   margin: 0 0 0.5em 0;
   padding: 0;
+  grid-area: nav;
 }
 
 .topmenu a {
@@ -112,55 +130,98 @@ header {
 footer {
   background-color: #bab089;
 }
-
+body{
+  background-color: #d6d0b9;
+}
 .sidebar {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  color: #fff;
+  height: 150px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 100%;
   grid-area: sidebar;
 }
 
 .mal {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 3;
   grid-area: mal;
+  background-color: #444;
+  color: #fff;
+  padding: 50px;
+  height: 400px;
+  width: 250px;
+  border-radius: 5px;
+  font-size: 150%;
+  margin: 5em;
 }
 
 .header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 3;
+  color: #fff;
+  height: 150px;
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 150%;
   grid-area: header;
 }
 
 .footer {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
+  color: #fff;
+  border-radius: 5px;
+  height: 250px;
+  font-size: 150%;
   grid-area: footer;
 }
 
+.col-4{
+  display:-ms-grid;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-gap:1em;
+}
+.col-4{
+  display:-ms-grid;
+  display:grid;
+  -ms-grid-columns:1fr 1fr;
+  grid-template-columns:1fr 1fr;
+  grid-gap:1em;
+}
+.col-4{
+  display:-ms-grid;
+  display:grid;
+  grid-template-columns:repeat(4 1fr);
+  grid-gap:2em;
+}
+
+.footer img{
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
+.footer li{
+  list-style-type: none;
+}
+.texti{
+  margin-top:250px;
+}
+
 .wrapper {
+  margin-left: 20%;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 320px 320px 320px;
-  grid-template-areas: 
-  "....... header header"
-  "sidebar mal mal" 
+  grid-template-columns: 440px 440px 440px;
+  grid-template-areas:
+  "nav nav nav"
+  "header header mal"
+  "sidebar sidebar mal"
   "footer  footer  footer";
-  background-color: #fff;
-  color: #444;
 }
 
 .box {
   background-color: #444;
   color: #fff;
+  height: 150px;
   border-radius: 5px;
   padding: 10px;
   font-size: 150%;
-}
-
-.header,
-.footer {
-  background-color: #999;
 }
