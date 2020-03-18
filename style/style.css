@@ -143,7 +143,7 @@ footer {
 .wrapper {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 120px 120px 120px;
+  grid-template-columns: 320px 320px 320px;
   grid-template-areas: 
   "....... header header"
   "sidebar mal mal" 
