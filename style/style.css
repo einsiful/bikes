@@ -148,10 +148,11 @@ body{
   color: #fff;
   padding: 50px;
   height: 400px;
-  width: 250px;
+  width: 270px;
   border-radius: 5px;
   font-size: 150%;
   margin: 5em;
+  text-align: center;  
 }
 
 .header {
@@ -202,7 +203,8 @@ body{
   list-style-type: none;
 }
 .texti{
-  margin-top:250px;
+  margin-top:450px;
+  color: black;
 }
 
 .wrapper {
@@ -275,4 +277,59 @@ body{
 }
 .bubbles,.facebook2,.github,.soundcloud2{
   padding:.6em .6em 0 0;
+}
+
+.mal span{
+  text-transform: uppercase;
+  display: block;
+
+}
+.text1{
+  font-size: 50px;
+  font-weight: 200;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: text 3s 1;
+}
+
+@keyframes text{
+  0%{
+    margin-bottom: -40px;
+  }
+  30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  80%{
+    letter-spacing: 8px;
+    margin-bottom: -20px; 
+  }
+  90%{
+    margin-bottom: -40px;
+  }
+}
+#kassi{
+  animation: tolva 3s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#or{
+  animation: or 2s ease-in-out infinite alternate;
+}
+@keyframes tolva{
+    from{
+      transform: rotateZ(0deg);
+    }
+    to{
+      transform: rotateZ(360deg);
+    }
+}
+@keyframes or{
+    from{
+      transform: rotateX(0deg);
+    }
+    to{
+      transform: rotateX(20deg);
+    }
 }
